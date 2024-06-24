@@ -3,8 +3,9 @@
 #include <cmath>
 using namespace std;
 
-float area (float radio);
-float area (float radio){
+double area (double radio);
+double area (double radio){
+    return M_PI * pow(radio,2);
 }
 
 int main (){
