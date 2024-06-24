@@ -38,7 +38,7 @@ int main (){
     if (a != 0){
         raices (a,b,c);
     } else {
-        "la incognita a debe de ser diferente de 0";
+        cout << "la incognita a debe de ser diferente de 0.";
     }
     return 0;
 }
