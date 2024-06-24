@@ -9,5 +9,12 @@ double area (double radio){
 }
 
 int main (){
+    double radio;
+    cout << "ingrese el radio del circulo: "; cin >> radio;
+    if (radio <= 0){
+        cout << "medida no valida." << endl;
+    } else {
+        cout << "el area del circulo es: " << area (radio);
+    }
     return 0;
 }
