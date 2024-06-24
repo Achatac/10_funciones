@@ -10,8 +10,8 @@ int main (){
     srand(static_cast<unsigned>(time(0)));
     cout << "Los numeros aleatorios generados son: " << endl;
     for (int i = 1; i <= cantidadDatos; i++){
-        numersoA = rand() % (maximo + 1);
-        cout << numeroAleatorio << endl;
+        numerosA = rand() % (maximo + 1);
+        cout << numerosA << endl;
     }
         return 0;
 }
