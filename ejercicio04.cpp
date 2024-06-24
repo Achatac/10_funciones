@@ -3,15 +3,15 @@
 #include <cmath>
 using namespace std;
 
-discriminante (int a, int b, int c);
-raices (int a, int b, int a);
+float discriminante (int a, int b, int c);
+void raices (int a, int b, int c);
 
-discriminante (int a, int b, int c){
+float discriminante (int a, int b, int c){
     float d = pow(b,2) - 4 * a * c;
     return d;
 }
 
-raices (int a, int b, int c){
+void raices (int a, int b, int c){
     float raiz1, raiz2;
     if (discriminante(a,b,c) > 0){
         raiz1 = (-b + sqrt(discriminante(a,b,c)))/(2 * a);
@@ -29,8 +29,16 @@ raices (int a, int b, int c){
     }
 }
 
-
-
 int main (){
+    float a , b , c;
+    cout << "ingrese el valor de la incognita a: "; cin >> a;
+    cout << "ingrese el valor de la incognita b: "; cin >> b;
+    cout << "ingrese el valor de la incognita c: "; cin >> c;
+
+    if (a != 0){
+        raices (a,b,c);
+    } else {
+        "la incognita a debe de ser diferente de 0";
+    }
     return 0;
 }
