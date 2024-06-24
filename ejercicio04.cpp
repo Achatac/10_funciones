@@ -14,17 +14,19 @@ discriminante (int a, int b, int c){
 raices (int a, int b, int c){
     float raiz1, raiz2;
     if (discriminante(a,b,c) > 0){
-        raiz1 = (-b + sqrt(discriminante(a,b,c)))/2 * a;
-        raiz2 = (-b - sqrt(discriminante(a,b,c)))/2 * a;
-        cout << "Las raices de la ecuacion son: "<< endl;
+        raiz1 = (-b + sqrt(discriminante(a,b,c)))/(2 * a);
+        raiz2 = (-b - sqrt(discriminante(a,b,c)))/(2 * a);
+        cout << "Las raices de la ecuacion son diferentes: "<< endl;
+        cout << raiz1 << endl << raiz2 << endl;
     }
     else if (discriminante(a,b,c) == 0){
-
+        float raizI = (-b)/(2 * a);
+        cout << "Las raices de la ecuacion son iguales: "<< endl;
+        cout << raizI << endl;
     }
     else {
-
+        cout << "las raices de la ecuacion son numeros complejos." << endl;
     }
-    
 }
 
 
