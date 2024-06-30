@@ -26,10 +26,10 @@ int main (){
     cout << "ingrese el valor de la incognita b: "; cin >> b;
     cout << "ingrese el valor de la incognita c: "; cin >> c;
     if (a != 0){
-        calcularRaies(a ,b ,c, raiz1, raiz2, siEsReal);
+        calcularRaices(a ,b ,c, raiz1, raiz2, siEsReal);
         if (siEsReal){
             if (raiz1 == raiz2){
-                cout << "Las raices de la ecuacion son iguales: ";
+                cout << "Las raices de la ecuacion son iguales: " << endl;
                 cout << raiz1 << endl;
             } else {
                 cout << "Las raices de la ecuacion son diferentes: " << endl;
@@ -38,7 +38,7 @@ int main (){
         } else {
             cout << "Las raices de la ecuacion son numeros complejos: " << endl;
             cout << raiz1 << " + " << raiz2 << "i" << endl;
-            cout << raiz << " - " << raiz2 << "i" << endl;
+            cout << raiz1 << " - " << raiz2 << "i" << endl;
         }
     } else {
         cout << "la incognita a debe de ser diferente de 0.";
