@@ -74,6 +74,12 @@ int main (){
         }
         cout << "Puntaje: Usuario - " << PuntajeDeUsuario << " , Computadora - " << PuntajeDeComputadora << endl;
     }
-
+    cout << "--- RESULTADO FINAL ---" << endl;
+    if (PuntajeDeUsuario == 3){
+        cout << "Felicidades, ganaste el juego!";
+    }
+    else {
+        cout << "La computadora gano el juego!";
+    }
     return 0;
 }
