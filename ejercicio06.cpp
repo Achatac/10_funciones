@@ -44,7 +44,7 @@ int DeterminacionDelGanador (int Jusuario, int Jcomputadora){
 }
 
 void MostrarJugadas (int jugada){
-
+    cout << jugadas [jugada];
 }
 
 int main (){
