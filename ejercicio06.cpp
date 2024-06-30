@@ -1,4 +1,4 @@
-//Juego de piedra, papel y tijera 
+//Juego de Piedra Papel y Tigeras 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -35,7 +35,7 @@ int JugadaDeComputadora (){
 
 int DeterminacionDelGanador (int Jusuario, int Jcomputadora){
     if (Jusuario == Jcomputadora){
-    return 0;
+        return 0;
     }
     else if ((Jusuario == PIEDRA && Jcomputadora == TIJERA) || (Jusuario == PAPEL && Jcomputadora == PIEDRA) || (Jusuario == TIJERA && Jcomputadora == PAPEL)){
         return 1;
@@ -49,8 +49,11 @@ void MostrarJugadas (int jugada){
     cout << jugadas [jugada];
 }
 
+
 int main (){
+    int PuntajeDeUsuario = 0, PuntajeDeComputadora = 0;
     srand(static_cast<unsigned int>(time(0)));
+    system ("cls");
 
     while (PuntajeDeUsuario < 3 && PuntajeDeComputadora < 3){
         cout << "----NUEVA RONDA!----" << endl;
@@ -62,6 +65,7 @@ int main (){
         cout << "La jugada de la computadora es: ";
         MostrarJugadas (JC);
         cout << endl << "------------------------" << endl;
+
         int ResultadoDeRonda = DeterminacionDelGanador(JU,JC);
         if (ResultadoDeRonda == 1){
             cout << "--- GANASTE LA RONDA! ---" << endl;
@@ -78,6 +82,7 @@ int main (){
         system ("pause");
         system ("cls");
     }
+
     cout << "--- RESULTADO FINAL ---" << endl;
     if (PuntajeDeUsuario == 3){
         cout << "Felicidades, ganaste el juego!";
