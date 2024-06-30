@@ -3,13 +3,7 @@
 #include <cmath>
 using namespace std;
 
-float discriminante (int a, int b, int c);
-void raices (int a, int b, int c);
-
-float discriminante (int a, int b, int c){
-    float d = pow(b,2) - 4 * a * c;
-    return d;
-}
+void calcularRaices (float a, float b, float c, float &raiz1 , float &raiz2, float &siEsReal);
 
 void raices (int a, int b, int c){
     float raiz1, raiz2;
