@@ -32,7 +32,15 @@ int JugadaDeComputadora (){
 }
 
 int DeterminacionDelGanador (int Jusuario, int Jcomputadora){
-
+    if (Jusuario == Jcomputadora){
+    return 0;
+    }
+    else if ((Jusuario == PIEDRA && Jcomputadora == TIJERA) || (Jusuario == PAPEL && Jcomputadora == PIEDRA) || (Jusuario == TIJERA && Jcomputadora == PAPEL)){
+        return 1;
+    }
+    else {
+        return -1;
+    }
 }
 
 void MostrarJugadas (int jugada){
