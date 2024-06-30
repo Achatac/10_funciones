@@ -5,6 +5,21 @@ using namespace std;
 
 void calcularRaices (float a, float b, float c, float &raiz1 , float &raiz2, float &siEsReal);
 
+void calcularRaices (float a, float b, float c, float &raiz1 , float &raiz2, float &siEsReal){  //se elimino la funcion discriminante 
+
+    float discriminante = pow(b, 2) - 4 * a * c;
+
+    if (discriminante >= 0) {
+        siEsReal = true;
+        raiz1 = (-b + sqrt(discriminante)) / (2 * a);
+        raiz2 = (-b - sqrt(discriminante)) / (2 * a);
+    } else {
+        siEsReal = false;
+        raiz1 = -b / (2 * a);
+        raiz2 = sqrt(-discriminante) / (2 * a); //parte imaginaria
+    }
+}
+
 void raices (int a, int b, int c){
     float raiz1, raiz2;
     if (discriminante(a,b,c) > 0){
