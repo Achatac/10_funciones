@@ -22,6 +22,8 @@ int JugadaDeUsuario (){
         cout << "0: PIEDRA" << endl << "1: PAPEL" << endl << "2. TIJERA" << endl; cin >> tuOpcion;
         if (tuOpcion < 0 || tuOpcion > 2) {
             cout << "Valor incorrecto, intente de nuevo." << endl;
+            system ("pause");
+            system ("cls");
         }
     } while (tuOpcion < 0 || tuOpcion > 2);
     return tuOpcion;
@@ -73,6 +75,8 @@ int main (){
             cout << "--- EMPATE! ---" << endl;
         }
         cout << "Puntaje: Usuario - " << PuntajeDeUsuario << " , Computadora - " << PuntajeDeComputadora << endl;
+        system ("pause");
+        system ("cls");
     }
     cout << "--- RESULTADO FINAL ---" << endl;
     if (PuntajeDeUsuario == 3){
