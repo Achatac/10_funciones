@@ -28,7 +28,7 @@ int JugadaDeUsuario (){
 } 
 
 int JugadaDeComputadora (){
-
+    return rand() % 3;
 }
 
 int DeterminacionDelGanador (int Jusuario, int Jcomputadora){
