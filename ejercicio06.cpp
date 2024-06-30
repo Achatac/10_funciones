@@ -60,6 +60,19 @@ int main (){
         cout << "La jugada de la computadora es: ";
         MostrarJugadas (JC);
         cout << endl << "------------------------" << endl;
+        int ResultadoDeRonda = DeterminacionDelGanador(JU,JC);
+        if (ResultadoDeRonda == 1){
+            cout << "--- GANASTE LA RONDA! ---" << endl;
+            PuntajeDeUsuario++;
+        }
+        else if (ResultadoDeRonda == -1){
+            cout << "--- LA COMPUTADORA GANO LA RONDA! ---" << endl;
+            PuntajeDeComputadora++;
+        }
+        else {
+            cout << "--- EMPATE! ---" << endl;
+        }
+        cout << "Puntaje: Usuario - " << PuntajeDeUsuario << " , Computadora - " << PuntajeDeComputadora << endl;
     }
 
     return 0;
