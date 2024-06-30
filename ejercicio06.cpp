@@ -49,5 +49,18 @@ void MostrarJugadas (int jugada){
 
 int main (){
     srand(static_cast<unsigned int>(time(0)));
+
+    while (PuntajeDeUsuario < 3 && PuntajeDeComputadora < 3){
+        cout << "----NUEVA RONDA!----" << endl;
+        int JU = JugadaDeUsuario();
+        int JC = JugadaDeComputadora();
+        cout << "Tu jugadas es: ";
+        MostrarJugadas (JU);
+        cout << endl;
+        cout << "La jugada de la computadora es: ";
+        MostrarJugadas (JC);
+        cout << endl << "------------------------" << endl;
+    }
+
     return 0;
 }
